@@ -20,8 +20,6 @@
     
 </head>
 <body>     
-<!-- <div class="container"> -->
-
     <!-- Materialize Nav Bar -->
     <nav>
         <div class="nav-wrapper black">
@@ -34,33 +32,15 @@
         </div>
     </nav>
 
-    <!-- SLick -->
-    <div class="thing" id="movie-wrapper">
-        <div><img src="images/inglouriousBasterds.jpg" style="width: 2000px; height:600px;" alt="slider image"></div>
-        <div><img src="images/kill-bill1.jpg" style="width: 2000px; height:600px;" alt="slider image"></div>
-        <div><img src="images/django1.jpg" style="width: 2000px; height:600px;" alt="slider image"></div>
+    <!-- SLick Slider -->
+    <div class="movie-slider" id="movie-wrapper">
+        <div><a href="" class="slick-image-one"><img class="first-carousel-image" alt="slider image"></a></div>
+        <div><a href="" class="slick-image-two"><img class="second-carousel-image"  alt="slider image"></a></div>
+        <div><a href="" class="slick-image-three"><img class="third-carousel-image"  alt="slider image"></a></div>
+        <div><a href="" class="slick-image-four"><img class="fourth-carousel-image" alt="slider image"></a></div>
+        <div><a href="" class="slick-image-five"><img class="fifth-carousel-image"  alt="slider image"></a></div>
     </div>
-    <!-- SLick -->
-
-            <!-- <div class="carousel" id="demo-carousel" data-indicators="true">
-                    <a class="carousel-item" href="#one!"><img src="images/basterds.jpg"></a>
-                    <a class="carousel-item" href="#two!"><img src="images/django.jpg"></a>
-                    <a class="carousel-item" href="#three!"><img src="images/kill-bill.jpg"></a>
-            </div> -->
-
-            <!-- <div class="carousel" id="demo-carousel-auto" data-indicators="true">
- 
-                    <a class="carousel-item" href="#one!"><img src="/Project1 test folder/images/basterds.jpg"></a>
-                 
-                    <a class="carousel-item" href="#two!"><img src="/Project1 test folder/images/django.jpg"></a>
-                 
-                    <a class="carousel-item" href="#three!"><img src="/Project1 test folder/images/kill-bill.jpg"></a>
-                 
-                    <a class="carousel-item" href="#four!"><img src="images/currant.jpg"></a>
-                 
-                    <a class="carousel-item" href="#five!"><img src="images/mango.jpg"></a>
-                  -->
-                  <!-- </div> -->
+    <!-- End SLick Slider -->
 
     <!-- Materialize Grid -->               
     <div class="container">               
@@ -89,7 +69,33 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col s12 black white-text">news</div>
+            <div class="col s12 black white-text"></div>news</div>
+                <div class="row news-section1">
+                    <div><a class="news1"><img class="col s12 m4 l2 first-news-img"></a></div>
+                    <div><a class="news1"><h5 class="col s12 m4 l10 first-news-article"></h5></a></div>
+                    <div><a class="news1"><h6 class="col s12 m4 l10 first-news-description"></h6></a></div>
+                </div>
+                <div class="row">
+                    <div><a class="news2"><img class="col s12 m4 l2 second-news-img"></a></div>
+                    <div><a class="news2"><h5 class="col s12 m4 l10 second-news-article article-title"></h5></a></div>
+                    <div><a class="news2"><h6 class="col s12 m4 l10 second-news-description"></h6></a></div>
+                </div>
+                <div class="row">
+                    <div><a class="news3"><img class="col s12 m4 l2 third-news-img"></a></div>
+                    <div><a class="news3"><h5 class="col s12 m4 l10 third-news-article article-title"></h5></a></div>
+                    <div><a class="news3"><h6 class="col s12 m4 l10 third-news-description"></h6></a></div>
+                </div>
+                <div class="row">
+                    <div><a class="news4"><img class="col s12 m4 l2 fourth-news-img"></a></div>
+                    <div><a class="news2"><h5 class="col s12 m4 l10 fourth-news-article article-title"></h5></a></div>
+                    <div><a class="news2"><h6 class="col s12 m4 l10 fourth-news-description"></h6></a></div>
+                </div>
+                <div class="row">
+                    <div><img class="col s12 m4 l2 fifth-news-img"></div>
+                    <div><h5 class="col s12 m4 l10 fifth-news-article article-title"></h5></div>
+                    <div class="col s12 m4 l10 fifth-news-description"></div>
+                </div>
+            </div>
         </div>
     </div>
       
@@ -102,12 +108,7 @@
                 <li><a href="#" class="btn-floating green btn-large"><i class="large material-icons">publish</i></a></li>
                 <li><a href="#" class="btn-floating orange btn-large"><i class="large material-icons">attach_file</i></a></li>
             </ul>
-    </div>
-            
-
-            
-
-<!-- </div> ./container -->
+        </div>
 
 
 <!--Import jQuery before materialize.js-->
@@ -117,43 +118,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="javascript/slick.js"></script>
+<script type="text/javascript" src="javascript/app.js"></script>
 <script type="text/javascript"></script>
-<script>
-$(document).ready(function(){
-    $('#demo-carousel').carousel();
-        //set time for auto (otherwise remove this part)
-        setInterval(function(){
-            $("#demo-carousel").carousel('next');
-        },2000);
-    });
-
-    $(document).ready(function(){
-        $('.thing').slick({
-            dots: true,
-            arrows: true,
-            autoplay: true,
-            autoplaySpeed: 3000
-        });
-    });
-//                 $(document).ready(function(){
- 
-//  $('#demo-carousel-auto').carousel();
- 
-//   setInterval(function() {
- 
-//     $('#demo-carousel-auto').carousel('next');
- 
-//   }, 1500);   
- 
-   
- 
-// });
-</script>
-
-<!-- <script
-src="https://code.jquery.com/jquery-3.3.1.js"
-integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-crossorigin="anonymous"></script> -->
       
 </body>
 </html>
