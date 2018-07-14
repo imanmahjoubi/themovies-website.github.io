@@ -1,12 +1,12 @@
-function displayMovieSearch() {
-    //Redirects user to movie-details.html
-    location.href = "movie-details.html";
+//Redirects user to movie-details.html
+    //location.href = "movie-details.html";
 
     //Run the function when a user click the search button
-    $('#submitSearch').click(function() {
+    //$('#submitSearch').click(function() {
     
     //Pull the value from the submit button
-    var movie = $('movieSearch').val();
+    var movie = 'The Revenant'
+    //$('movieSearch').val();
 
     // Main query url; returns info on movie searched
     var queryURL = 'https://api.themoviedb.org/3/search/movie?api_key=0ff882446ecc7061a134cf692047205b&query='+ movie;
@@ -23,15 +23,24 @@ function displayMovieSearch() {
     console.log(response);
     console.log(response.backdrop_path);
 
+    var movieTitle = response.results[0].original_title;
+    $(document).prop('title', movieTitle);
+
+    var moviePlot = response.results[0].overview;
+    $("#plot").append(moviePlot);
+    var movieDate = response.results[0].release_date;
+    $('#releaseDate').append(movieDate);
+
+
     var backdropImg1 = response.results[0].backdrop_path;
     console.log(backdropImg1);
-    
 
     var fullImageUrl1 = imageBaseURL + response.results[0].backdrop_path;
     console.log(fullImageUrl1);
     var carouselSlide = $('.first-carousel-image');
     carouselSlide.attr('src', fullImageUrl1);
 
+    //This is the news articles, currently working 
     var queryURL = "https://newsapi.org/v2/everything?q=" + movie + "&sortBy=popularity&apiKey=215fb6a8533441b8b97d0c058a476321";
             $.ajax({
                 url: queryURL,
@@ -145,6 +154,6 @@ function displayMovieSearch() {
 
         
 
-    });
+  });
 
-  })}
+  //})

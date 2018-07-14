@@ -2,21 +2,18 @@
 <head>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <title>Materialize/Slick</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <title>Search Result!</title>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <!-- <script type="text/javascript" src="Project1 test folder/project1Test.js"></script> -->
-
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <!-- slick -->
-
-    
+    <!-- slick -->   
 </head>
 <body>     
     <!-- Materialize Nav Bar -->
@@ -36,41 +33,45 @@
     <!-- SLick Slider -->
     <div class="movie-slider" id="movie-wrapper">
         <div><a href="" class="slick-image-one"><img class="first-carousel-image" alt="slider image"></a></div>
-        <div><a href="" class="slick-image-two"><img class="second-carousel-image"  alt="slider image"></a></div>
-        <div><a href="" class="slick-image-three"><img class="third-carousel-image"  alt="slider image"></a></div>
-        <div><a href="" class="slick-image-four"><img class="fourth-carousel-image" alt="slider image"></a></div>
-        <div><a href="" class="slick-image-five"><img class="fifth-carousel-image"  alt="slider image"></a></div>
     </div>
     <!-- End SLick Slider -->
 
-    <!-- Materialize Grid -->               
-    <div class="container">               
+
+    <!--Movie Info Section-->
+    <div class="container">
         <div class="row">
-            <div class="col s4">
-                <img src="images/ib.jpg" style="width: 200px; height:300px;">
-            </div>
-            <div class="col s4">
-                <img src="images/ju.jpg" style="width: 200px; height:300px;">
-            </div>
-            <div class="col s4">
-                <img src="images/kb.jpg" style="width: 200px; height:300px;">
+            <div class="col s12 grey darken-2 white-text">
+            <h3>More Info on </h3>
             </div>
         </div>
         <div class="row">
-            <div class="col s4">
-                <img src="images/kb.jpg" style="width: 200px; height:300px;">
-            </div>
-            <div class="col s4">
-                <img src="images/ib.jpg" style="width: 200px; height:300px;">
-            </div>
-            <div class="col s4">
-                <img src="images/ju.jpg" style="width: 200px; height:300px;">
+            <div class="col s12 grey white-text">
+                <ul>
+                    <li id="releaseDate"> Release Date: </li>
+                    <li id="plot"> Plot Overview: </li>
+                </ul>
             </div>
         </div>
     </div>
+
+
+    <!--Review Section, being worked on by Imen-->
     <div class="container">
         <div class="row">
-            <div class="col s12 black white-text"></div>news</div>
+            <div class="col s12 grey darken-2 white-text">
+            <h3>Review Section</h3>
+            </div>
+
+        </div>
+    </div>
+
+ 
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 grey darken-2 white-text">
+                <h3>Here is some news on </h3>
+                
                 <div class="row news-section1">
                     <div><a class="news1"><img class="col s12 m4 l2 first-news-img"></a></div>
                     <div><a class="news1"><h5 class="col s12 m4 l10 first-news-article"></h5></a></div>
@@ -99,17 +100,7 @@
             </div>
         </div>
     </div>
-      
-    <!-- Materialize FIXED ACTION BUTTON -->
-    <div class="fixed-action-btn">
-        <a href="#" class="btn-floating red btn-large"><i class="large material-icons">mode_edit</i></a>
-            <ul>
-                <li><a href="#" class="btn-floating yellow btn-large"><i class="large material-icons">insert_chart</i></a></li>
-                <li><a href="#" class="btn-floating blue btn-large"><i class="large material-icons">format_quote</i></a></li>
-                <li><a href="#" class="btn-floating green btn-large"><i class="large material-icons">publish</i></a></li>
-                <li><a href="#" class="btn-floating orange btn-large"><i class="large material-icons">attach_file</i></a></li>
-            </ul>
-        </div>
+
 
 
 <!--Import jQuery before materialize.js-->
@@ -119,7 +110,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="javascript/slick.js"></script>
-<script type="text/javascript" src="javascript/app.js"></script>
 <script type="text/javascript" src="javascript/app2.js"></script>
       
 </body>
