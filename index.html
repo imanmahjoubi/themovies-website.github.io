@@ -42,29 +42,27 @@
     <!-- End SLick Slider -->
 
     <!-- Materialize Grid -->               
-    <div class="container">               
-        <div class="row">
-            <div class="col s4">
-                <img src="images/ib.jpg" style="width: 200px; height:300px;">
+   <div class="container">
+    <h3>Comedy</h3>
+    </div>
+    <div class="autoplay" id="wrapper">               
+        
+            <div><img src="images/ib.jpg" style="width: 200px; height:200px;">
             </div>
-            <div class="col s4">
-                <img src="images/ju.jpg" style="width: 200px; height:300px;">
+            
+                <div><img src="images/ju.jpg" style="width: 200px; height:200px;">
             </div>
-            <div class="col s4">
-                <img src="images/kb.jpg" style="width: 200px; height:300px;">
+            
+               <div><img src="images/kb.jpg" style="width: 200px; height:200px;">
             </div>
-        </div>
-        <div class="row">
-            <div class="col s4">
-                <img src="images/kb.jpg" style="width: 200px; height:300px;">
+        
+            <div><img src="images/ib.jpg" style="width: 200px; height:200px;">
             </div>
-            <div class="col s4">
-                <img src="images/ib.jpg" style="width: 200px; height:300px;">
+        
+            <div><img src="images/ju.jpg" style="width: 200px; height:200px;">
             </div>
-            <div class="col s4">
-                <img src="images/ju.jpg" style="width: 200px; height:300px;">
-            </div>
-        </div>
+            
+       
     </div>
     <div class="container">
         <div class="row">
@@ -119,6 +117,38 @@
 <script type="text/javascript" src="javascript/slick.js"></script>
 <script type="text/javascript" src="javascript/app.js"></script>
 <script type="text/javascript"></script>
+    <script type="text/javascript" src="javascript/genre.js"></script>
+<script>
+$(document).ready(function(){
+    $('#demo-carousel').carousel();
+        //set time for auto (otherwise remove this part)
+        setInterval(function(){
+            $("#demo-carousel").carousel('next');
+        },2000);
+    });
+
+    $(document).ready(function(){
+        $('.thing').slick({
+            dots: true,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 3000
+        });
+    });
+//   
+    $(document).ready(function(){
+    $('.autoplay').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+    });
+  
+</script>
+
+=======
+>>>>>>> 9308b8c3c134fd35bdda822b6e25bc72c0888dc3
       
 </body>
 </html>
