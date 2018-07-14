@@ -1,26 +1,17 @@
-console.log("Hello-world");
+function displayMovieSearch() {
+    //Redirects user to movie-details.html
+    location.href = "movie-details.html";
 
-$(document).ready(function(){
-    $('.movie-slider').slick({
-        dots: true,
-        nextArrow: '<button class="NextArrow"></button>',
-        prevArrow: '<button class="PrevArrow"></button>',
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 3000
-    });
-    displayMovieImg();
-    // displayMovieNews();
-});
+    //Run the function when a user click the search button
+    $('#submitSearch').click(function() {
+    
+    //Pull the value from the submit button
+    var movie = $('movieSearch').val();
 
-function displayMovieImg() {
+    // Main query url; returns info on movie searched
+    var queryURL = 'https://api.themoviedb.org/3/search/movie?api_key=0ff882446ecc7061a134cf692047205b&query='+ movie;
 
-    var movie = $(this).attr("data-name");
-    // Main query url; returns long list of movies
-    var queryURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=0ff882446ecc7061a134cf692047205b";
-
-    // for a single movie result
-    // var queryURL = "https://api.themoviedb.org/3/movie/550?sort_by=popularity.desc&api_key=0ff882446ecc7061a134cf692047205b";
+    // This is the base URL for images from the API
     var imageBaseURL = 'https://image.tmdb.org/t/p/original';
 
     // Creating an AJAX call
@@ -29,48 +20,19 @@ function displayMovieImg() {
       method: "GET"
     }).then(function(response) {
 
-        console.log(response);
-        // console.log(response.backdrop_path);
+    console.log(response);
+    console.log(response.backdrop_path);
 
-        var backdropImg1 = response.results[0].backdrop_path;
-        console.log(backdropImg1);
-        var backdropImg2 = response.results[1].backdrop_path;
-        console.log(backdropImg2);
-        var backdropImg3 = response.results[2].backdrop_path;
-        console.log(backdropImg3);
-        var backdropImg4 = response.results[3].backdrop_path;
-        console.log(backdropImg4);
-        var backdropImg5 = response.results[4].backdrop_path;
-        console.log(backdropImg5);
+    var backdropImg1 = response.results[0].backdrop_path;
+    console.log(backdropImg1);
+    
 
-        var fullImageUrl1 = imageBaseURL + response.results[0].backdrop_path;
-        console.log(fullImageUrl1);
-        var carouselSlide = $('.first-carousel-image');
-        carouselSlide.attr('src', fullImageUrl1);
+    var fullImageUrl1 = imageBaseURL + response.results[0].backdrop_path;
+    console.log(fullImageUrl1);
+    var carouselSlide = $('.first-carousel-image');
+    carouselSlide.attr('src', fullImageUrl1);
 
-        var fullImageUrl2 = imageBaseURL + response.results[1].backdrop_path;
-        console.log(fullImageUrl2);
-        var carouselSlide2 = $('.second-carousel-image');
-        carouselSlide2.attr('src', fullImageUrl2);
-
-        var fullImageUrl3 = imageBaseURL + response.results[2].backdrop_path;
-        console.log(fullImageUrl3);
-        var carouselSlide3 = $('.third-carousel-image');
-        carouselSlide3.attr('src', fullImageUrl3);
-
-        var fullImageUrl4 = imageBaseURL + response.results[3].backdrop_path;
-        console.log(fullImageUrl4);
-        var carouselSlide4 = $('.fourth-carousel-image');
-        carouselSlide4.attr('src', fullImageUrl4);
-
-        var fullImageUrl5 = imageBaseURL + response.results[4].backdrop_path;
-        console.log(fullImageUrl5);
-        var carouselSlide5 = $('.fifth-carousel-image');
-        carouselSlide5.attr('src', fullImageUrl5);
-
-        
-        
-            var queryURL = "https://newsapi.org/v2/everything?q=Movies&from=2018-07-12&sortBy=popularity&apiKey=215fb6a8533441b8b97d0c058a476321";
+    var queryURL = "https://newsapi.org/v2/everything?q=" + movie + "&sortBy=popularity&apiKey=215fb6a8533441b8b97d0c058a476321";
             $.ajax({
                 url: queryURL,
                 method: "GET"
@@ -180,15 +142,9 @@ function displayMovieImg() {
                 var newsArticleDescription4 = $(".fourth-news-description");
                 newsArticleDescription4.text(movieNewsDescription4);
             })
-            
-            
 
-
-
-
-
-
+        
 
     });
 
-  }
+  })}

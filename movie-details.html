@@ -1,61 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
+    <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <title>Materialize/Slick</title>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <!-- <script type="text/javascript" src="Project1 test folder/project1Test.js"></script> -->
+
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <!-- slick -->
+
+    
 </head>
-<body>
+<body>     
+    <!-- Materialize Nav Bar -->
+    <nav style="background-color: black">
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">IheartMovie</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li>   <input id="movieSearch" type="search" placeholder="Search" required>
+                </li>
+                <li> <button class="btn black"><i id="submitSearch" class="fa fa-search"></i></button>
+                </li>
+            </ul>
+        </div>
+     </nav>
 
-
-
-<!-- Materialize Nav Bar -->
-<nav>
-    <div class="nav-wrapper black">
-        <a href="#" class="brand-logo"><i class="material-icons">favorite_border</i>iheartmovies</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="index.html">home</a></li>
-            <li><input type="search" placeholder="Search"></li>
-        </ul>
+    <!-- SLick Slider -->
+    <div class="movie-slider" id="movie-wrapper">
+        <div><a href="" class="slick-image-one"><img class="first-carousel-image" alt="slider image"></a></div>
+        <div><a href="" class="slick-image-two"><img class="second-carousel-image"  alt="slider image"></a></div>
+        <div><a href="" class="slick-image-three"><img class="third-carousel-image"  alt="slider image"></a></div>
+        <div><a href="" class="slick-image-four"><img class="fourth-carousel-image" alt="slider image"></a></div>
+        <div><a href="" class="slick-image-five"><img class="fifth-carousel-image"  alt="slider image"></a></div>
     </div>
-</nav>
+    <!-- End SLick Slider -->
 
-<!-- SLick -->
-<div class="thing" id="movie-wrapper">
-    <div><img src="images/inglouriousBasterds.jpg" style="width: 2000px; height:600px;" alt="slider image"></div>
-    <div><img src="images/kill-bill1.jpg" style="width: 2000px; height:600px;" alt="slider image"></div>
-    <div><img src="images/django1.jpg" style="width: 2000px; height:600px;" alt="slider image"></div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col s12 black white-text">news</div>
+    <!-- Materialize Grid -->               
+    <div class="container">               
+        <div class="row">
+            <div class="col s4">
+                <img src="images/ib.jpg" style="width: 200px; height:300px;">
+            </div>
+            <div class="col s4">
+                <img src="images/ju.jpg" style="width: 200px; height:300px;">
+            </div>
+            <div class="col s4">
+                <img src="images/kb.jpg" style="width: 200px; height:300px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s4">
+                <img src="images/kb.jpg" style="width: 200px; height:300px;">
+            </div>
+            <div class="col s4">
+                <img src="images/ib.jpg" style="width: 200px; height:300px;">
+            </div>
+            <div class="col s4">
+                <img src="images/ju.jpg" style="width: 200px; height:300px;">
+            </div>
+        </div>
     </div>
-</div>
-
-
-<!-- </div> ./container -->
+    <div class="container">
+        <div class="row">
+            <div class="col s12 black white-text"></div>news</div>
+                <div class="row news-section1">
+                    <div><a class="news1"><img class="col s12 m4 l2 first-news-img"></a></div>
+                    <div><a class="news1"><h5 class="col s12 m4 l10 first-news-article"></h5></a></div>
+                    <div><a class="news1"><h6 class="col s12 m4 l10 first-news-description"></h6></a></div>
+                </div>
+                <div class="row">
+                    <div><a class="news2"><img class="col s12 m4 l2 second-news-img"></a></div>
+                    <div><a class="news2"><h5 class="col s12 m4 l10 second-news-article article-title"></h5></a></div>
+                    <div><a class="news2"><h6 class="col s12 m4 l10 second-news-description"></h6></a></div>
+                </div>
+                <div class="row">
+                    <div><a class="news3"><img class="col s12 m4 l2 third-news-img"></a></div>
+                    <div><a class="news3"><h5 class="col s12 m4 l10 third-news-article article-title"></h5></a></div>
+                    <div><a class="news3"><h6 class="col s12 m4 l10 third-news-description"></h6></a></div>
+                </div>
+                <div class="row">
+                    <div><a class="news4"><img class="col s12 m4 l2 fourth-news-img"></a></div>
+                    <div><a class="news2"><h5 class="col s12 m4 l10 fourth-news-article article-title"></h5></a></div>
+                    <div><a class="news2"><h6 class="col s12 m4 l10 fourth-news-description"></h6></a></div>
+                </div>
+                <div class="row">
+                    <div><img class="col s12 m4 l2 fifth-news-img"></div>
+                    <div><h5 class="col s12 m4 l10 fifth-news-article article-title"></h5></div>
+                    <div class="col s12 m4 l10 fifth-news-description"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <!-- Materialize FIXED ACTION BUTTON -->
+    <div class="fixed-action-btn">
+        <a href="#" class="btn-floating red btn-large"><i class="large material-icons">mode_edit</i></a>
+            <ul>
+                <li><a href="#" class="btn-floating yellow btn-large"><i class="large material-icons">insert_chart</i></a></li>
+                <li><a href="#" class="btn-floating blue btn-large"><i class="large material-icons">format_quote</i></a></li>
+                <li><a href="#" class="btn-floating green btn-large"><i class="large material-icons">publish</i></a></li>
+                <li><a href="#" class="btn-floating orange btn-large"><i class="large material-icons">attach_file</i></a></li>
+            </ul>
+        </div>
 
 
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
+        
 <!-- Materialize -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="javascript/script.js"></script>
 <script type="text/javascript" src="javascript/slick.js"></script>
-<script type="text/javascript"></script>
-<script>
-
-
-</script>
+<script type="text/javascript" src="javascript/app.js"></script>
+<script type="text/javascript" src="javascript/app2.js"></script>
+      
 </body>
 </html>
