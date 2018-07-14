@@ -63,29 +63,27 @@
                   <!-- </div> -->
 
     <!-- Materialize Grid -->               
-    <div class="container">               
-        <div class="row">
-            <div class="col s4">
-                <img src="images/ib.jpg" style="width: 200px; height:300px;">
+   <div class="container">
+    <h3>Comedy</h3>
+    </div>
+    <div class="autoplay" id="wrapper">               
+        
+            <div><img src="images/ib.jpg" style="width: 200px; height:200px;">
             </div>
-            <div class="col s4">
-                <img src="images/ju.jpg" style="width: 200px; height:300px;">
+            
+                <div><img src="images/ju.jpg" style="width: 200px; height:200px;">
             </div>
-            <div class="col s4">
-                <img src="images/kb.jpg" style="width: 200px; height:300px;">
+            
+               <div><img src="images/kb.jpg" style="width: 200px; height:200px;">
             </div>
-        </div>
-        <div class="row">
-            <div class="col s4">
-                <img src="images/kb.jpg" style="width: 200px; height:300px;">
+        
+            <div><img src="images/ib.jpg" style="width: 200px; height:200px;">
             </div>
-            <div class="col s4">
-                <img src="images/ib.jpg" style="width: 200px; height:300px;">
+        
+            <div><img src="images/ju.jpg" style="width: 200px; height:200px;">
             </div>
-            <div class="col s4">
-                <img src="images/ju.jpg" style="width: 200px; height:300px;">
-            </div>
-        </div>
+            
+       
     </div>
     <div class="container">
         <div class="row">
@@ -118,6 +116,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="javascript/slick.js"></script>
 <script type="text/javascript"></script>
+    <script type="text/javascript" src="javascript/genre.js"></script>
 <script>
 $(document).ready(function(){
     $('#demo-carousel').carousel();
@@ -135,25 +134,18 @@ $(document).ready(function(){
             autoplaySpeed: 3000
         });
     });
-//                 $(document).ready(function(){
- 
-//  $('#demo-carousel-auto').carousel();
- 
-//   setInterval(function() {
- 
-//     $('#demo-carousel-auto').carousel('next');
- 
-//   }, 1500);   
- 
-   
- 
-// });
+//   
+    $(document).ready(function(){
+    $('.autoplay').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+    });
+  
 </script>
 
-<!-- <script
-src="https://code.jquery.com/jquery-3.3.1.js"
-integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-crossorigin="anonymous"></script> -->
       
 </body>
 </html>
