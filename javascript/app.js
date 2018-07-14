@@ -3,9 +3,7 @@ console.log("Hello-world");
 $(document).ready(function(){
     $('.movie-slider').slick({
         dots: true,
-        nextArrow: '<button class="NextArrow"></button>',
-        prevArrow: '<button class="PrevArrow"></button>',
-        arrows: true,
+        arrows: false,
         autoplay: true,
         autoplaySpeed: 3000
     });
@@ -42,6 +40,9 @@ function displayMovieImg() {
         console.log(backdropImg4);
         var backdropImg5 = response.results[4].backdrop_path;
         console.log(backdropImg5);
+
+        
+
 
         var fullImageUrl1 = imageBaseURL + response.results[0].backdrop_path;
         console.log(fullImageUrl1);
