@@ -120,6 +120,7 @@ function displayMovieImg() {
                 var newsArticleDescription4 = $(".fourth-news-description");
                 newsArticleDescription4.text(movieNewsDescription4);
             })
+
     });
 
   }

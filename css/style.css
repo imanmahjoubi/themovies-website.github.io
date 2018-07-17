@@ -52,4 +52,22 @@ img{
    font-size: 12pt;
    color: white;
    bottom: 45px;
+.menu-area ul il a{
+    display: inline-block;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:  black;  
+}
+
+#movieInfo{
+    font-size: 22px;
+}
+
+#poster{
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block
 }
