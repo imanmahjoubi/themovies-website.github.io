@@ -1,85 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!-- <script type="text/javascript" src="Project1 test folder/project1Test.js"></script> -->
-    <!-- Slick -->
-    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </head>
 <body>
-
-
-
-<!-- Materialize Nav Bar -->
-<nav>
-    <div class="nav-wrapper black">
-        <a href="#" class="brand-logo"><i class="material-icons">favorite_border</i>iheartmovies</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="index.html">home</a></li>
-            <li><input type="search" placeholder="Search"></li>
+<nav style="background-color: black">
+    <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">IheartMovie</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="index.html"><i class="material-icons">Home</i></a></li>
+            <li>   <input id="search" type="search" placeholder="Search" required>
+            </li>
+            <li> <button class="btn black" ><i class="fa fa-search"></i></button>
+            </li>
         </ul>
     </div>
 </nav>
 
-<!-- SLick -->
-<div class="thing" id="movie-wrapper">
-    <div><img src="images/inglouriousBasterds.jpg" style="width: 2000px; height:600px;" alt="slider image"></div>
-    <div><img src="images/kill-bill1.jpg" style="width: 2000px; height:600px;" alt="slider image"></div>
-    <div><img src="images/django1.jpg" style="width: 2000px; height:600px;" alt="slider image"></div>
-</div>
-
-
-
-
-<!-- Review -->
-<div class="row">
-<div class="col s5 ">
-    <h2 class="header">Horizontal Card</h2>
-    <div class="card horizontal">
+<div class="container">
+    <h4>All reviews</h4>
+    <ul class="collection">
+    <!-- Movie reviews-->
+    </ul>
+    <h4>Enter your review</h4>
+    <div class="card horizontal" >
         <div class="card-image">
+            <img src="images/user.png" id="user">
         </div>
         <div class="card-stacked">
-            <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.</p>
+            <div class="card-content row">
+                <div class="input-field col s4">
+                    <input placeholder="UserName" max="10" id="user_name" type="text" class="validate">
+                </div>
+                <div class="input-field col s3">
+                    <select id="rate">
+                        <option value=""  selected>Rate</option>
+                        <option value="1">*</option>
+                        <option value="2">**</option>
+                        <option value="3">***</option>
+                        <option value="4">****</option>
+                        <option value="5">*****</option>
+                    </select>
+                </div>
+
+                <div class=" input-field col s12">
+                    <textarea id="review" placeholder="Review" class="materialize-textarea"></textarea>
+                </div>
             </div>
             <div class="card-action">
-                <a href="#">This is a link</a>
+                <a class="btn-floating btn-large waves-effect waves-light red" id="add"><i class="material-icons">add</i></a>
             </div>
         </div>
     </div>
-</div>
-</div>
 
-<!-- End Review Section -->
 
-<div class="container">
-    <div class="row">
-        <div class="col s12 black white-text">news</div>
-    </div>
 </div>
 
 
-<!-- </div> ./container -->
+
+<!--<script type="text/javascript" src="javascript/app.js"></script>-->
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDNLV8nEiHGle0AeKXrvoCbcpLxZjLSCng",
+        authDomain: "iheartmovie-e6ca6.firebaseapp.com",
+        databaseURL: "https://iheartmovie-e6ca6.firebaseio.com",
+        projectId: "iheartmovie-e6ca6",
+        storageBucket: "iheartmovie-e6ca6.appspot.com",
+        messagingSenderId: "847005601179"
+    };
+    var movie_name = 'the revenant'
+    $(document).ready(function(){
+        $('select').formSelect();
+
+        firebase.initializeApp(config);
+        var database = firebase.database();
+
+        $("#add").on("click", function() {
+            database.ref().push({
+                name: $('#user_name').val().trim(),
+                rate: $('#rate').val().trim() ,
+                review: $('#review').val().trim(),
+                movie_name : 'mission impossible'
+            });
+        })
+
+        database.ref().orderByChild('movie_name').equalTo('mission impossible').on("child_added", function(snapshot) {
+            var reviews  = snapshot.val();
+            var ul = $('.collection');
+            var li = $('<li>');
+            var img = $('<img>');
+            var stars = $('<p>');
+            var p_review = $('<p>');
+            var span_name = $('<span>');
+
+            img.attr('src','images/user%20copy.png');
+            li.addClass('collection-item avatar');
+            img.addClass('circle');
+            img.attr('alt','');
 
 
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-<!-- Materialize -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="javascript/script.js"></script>
-<script type="text/javascript" src="javascript/slick.js"></script>
-<script type="text/javascript"></script>
-<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+            for(var i= 0 ;i < parseInt(reviews.rate); i++){
+                stars.append('<i class="material-icons">grade</i>');
+            }
 
+            span_name.addClass('title username');
+            p_review.addClass('review_area');
+            span_name.html(reviews.name);
+            p_review.html(reviews.review);
+
+            li.append(img,span_name,p_review,stars);
+            ul.append(li);
+
+            // Handle the errors
+        }, function(errorObject) {
+            console.log("Errors handled: " + errorObject.code);
+        });
+
+    });
+</script>
 
 </body>
 </html>

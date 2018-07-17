@@ -16,7 +16,15 @@ img{
 .menu-item{
     width: 75%;
 }
-
+#user {
+    width: 100px;
+    height: 120px;
+    margin-left: 20%;
+    margin-top: 50%;
+}
+#add {
+    float: right;
+}
 .menu-item ul{
     float: right;
     list-style: none;
