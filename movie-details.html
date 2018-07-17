@@ -88,13 +88,25 @@
         var database = firebase.database();
 
         $("#add").on("click", function() {
-            database.ref().push({
-                name: $('#user_name').val().trim(),
-                rate: $('#rate').val().trim() ,
-                review: $('#review').val().trim(),
-                movie_name : 'mission impossible'
-            });
-        })
+            if($('#user_name').val().trim() === '') {
+              alert('please enter a user name');
+            }
+            else if($('#rate').val().trim() === ''){
+                alert('please select your rate');
+            }
+            else if($('#review').val().trim() === ''){
+                alert('please select your review');
+            }
+            else{
+                database.ref().push({
+                    name: $('#user_name').val().trim(),
+                    rate: $('#rate').val().trim() ,
+                    review: $('#review').val().trim(),
+                    movie_name : 'mission impossible'
+                });
+            }
+
+        });
 
         database.ref().orderByChild('movie_name').equalTo('mission impossible').on("child_added", function(snapshot) {
             var reviews  = snapshot.val();
