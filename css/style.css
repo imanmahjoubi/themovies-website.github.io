@@ -1,40 +1,57 @@
-body{
+body {
     background-color: grey;
     
 }
 
-#wrapper{
+#wrapper {
     width: 1170px;
     margin: 0 auto;
 }
+
 #movie-wrapper{
     width: 100%;
 }
+
 img{
     width: 100%;
 }
-.logo{
-    width: 20%;
-    float: left;
+
+.material-icons {
+    cursor:pointer;
 }
 
-.menu-item{
-    width: 75%;
-}
-
-.menu-item ul{
-    float: right;
-    list-style: none;
-}
-
-.menu-area{
+.card-content {
+    height: 160px;
     overflow: hidden;
 }
 
-.menu-area ul li{
-    display: inline-block;
+.card-image {
+    height: 180px;
 }
 
+.slick-next:before, .slick-prev:before  {
+    color: white;
+    font-size: 40px;
+}
+
+#movie-wrapper .slick-next {
+    right: 25px;
+    z-index: 9999;
+}
+
+#movie-wrapper .slick-prev {
+    left: 25px;
+    z-index: 9999;
+}
+
+.slick-dots {
+    bottom: 45px;
+}
+
+.slick-dots li button::before { 
+   font-size: 12pt;
+   color: white;
+   bottom: 45px;
 .menu-area ul il a{
     display: inline-block;
     padding: 10px 15px;
