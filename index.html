@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <head>
+    <meta charset="UTF-8">
     <!--Import Google Icon Font-->
     <title>IheartMovie</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <!--Let browser know website is optimized for mobile-->
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <title>iHeartMovies</title>
+   <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
@@ -16,96 +24,300 @@
     
 </head>
 <body>     
-    <!-- Materialize Nav Bar -->
-    <nav style="background-color: black">
-        <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo">IheartMovie</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="index.html">Home</a></li>
-                <li>   <input id="search" type="search" placeholder="Search" required></li>
+<!-- Materialize Nav Bar -->
+<nav>
+    <div class="nav-wrapper black">
+        <a href="#" class="brand-logo"><img src="images/iheartmovie.png"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">home</a></li>
+                <li><input type="text" placeholder="search" id="movie-name" style="color: white"></li>
+                <li><i class="fa fa-search" id="search-button"></i></li>
             </ul>
-        </div>
-    </nav>
-    <!-- SLick Slider -->
-    <div class="movie-slider" id="movie-wrapper">
-        <div><a href="" class="slick-image-one"><img class="first-carousel-image" alt="slider image"></a></div>
-        <div><a href="" class="slick-image-two"><img class="second-carousel-image"  alt="slider image"></a></div>
-        <div><a href="" class="slick-image-three"><img class="third-carousel-image"  alt="slider image"></a></div>
-        <div><a href="" class="slick-image-four"><img class="fourth-carousel-image" alt="slider image"></a></div>
-        <div><a href="" class="slick-image-five"><img class="fifth-carousel-image"  alt="slider image"></a></div>
-    </div>
-    <!-- End SLick Slider -->
 
-    <!-- Materialize Grid -->               
-   <div class="container">
-    <h3>Comedy</h3>
     </div>
-    <div class="autoplay" id="wrapper">               
-        
-            <div><a href=""><img class="slick-genre-one" style="width: 200px; height:200px;"></a>
-            </div>
-            
-                <div><img src="images/ju.jpg" style="width: 200px; height:200px;">
-            </div>
-            
-               <div><img src="images/kb.jpg" style="width: 200px; height:200px;">
-            </div>
-        
-            <div><img src="images/ib.jpg" style="width: 200px; height:200px;">
-            </div>
-        
-            <div><img src="images/ju.jpg" style="width: 200px; height:200px;">
-            </div>
-            
-       
+</nav>
+
+<!-- Slick Slider -->
+<div class="single-item" id="movie-wrapper">
+    <div><img class="carousel-image-1" alt="slider image"></div>
+    <div><img class="carousel-image-2" alt="slider image"></div>
+    <div><img class="carousel-image-3" alt="slider image"></div>
+    <div><img class="carousel-image-4" alt="slider image"></div>
+    <div><img class="carousel-image-5" alt="slider image"></div>
+</div>
+
+
+<div class="row genre-div">
+
+    <div class="col s12"><span class="left"><h5>Fantasy:</h5></span></div>
+</div>
+
+<div class="responsive wrapper " >
+
+    <div><img class="slick-genre-1" style="width: 200px; height:200px;">
     </div>
-    <div class="container">
+
+    <div><img class="slick-genre-2" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-genre-3" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-genre-4" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-genre-5" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-genre-6" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-genre-7" style="width: 200px; height:200px;">
+    </div>
+
+
+</div>
+
+<div class="row genre-div">
+
+    <div class="col s2"><span class="center"><h5>Action:</h5></span></div>
+</div>
+
+<div class="responsive wrapper">
+
+    <div><img class="slick-action-1" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-action-2" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-action-3" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-action-4" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-action-5" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-action-6" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-action-7" style="width: 200px; height:200px;">
+    </div>
+
+
+</div>
+
+<div class="row genre-div">
+
+    <div class="col s2"><span class="center"><h5>Adventure:</h5></span></div>
+</div>
+
+<div class="responsive wrapper" >
+
+    <div><img class="slick-adventure-1" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-adventure-2" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-adventure-3" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-adventure-4" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-adventure-5" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-adventure-6" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-adventure-7" style="width: 200px; height:200px;">
+    </div>
+
+
+</div>
+
+<div class="row genre-div">
+
+    <div class="col s2"><span class="center"><h5>Crime:</h5></span></div>
+</div>
+
+<div class="responsive wrapper" >
+
+    <div><img class="slick-crime-1" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-crime-2" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-crime-3" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-crime-4" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-crime-5" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-crime-6" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-crime-7" style="width: 200px; height:200px;">
+    </div>
+
+
+</div>
+
+<div class="row genre-div">
+
+    <div class="col s2"><span class="center"><h5>Horror:</h5></span></div>
+</div>
+
+<div class="responsive wrapper" >
+
+    <div><img class="slick-horror-1" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-horror-2" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-horror-3" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-horror-4" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-horror-5" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-horror-6" style="width: 200px; height:200px;">
+    </div>
+
+    <div><img class="slick-horror-7" style="width: 200px; height:200px;">
+    </div>
+
+
+</div>
+<!-- News Div -->
+<div class="containe-fluid">
+    <div class="row">
+        <div class="col s12 white-text">
+            <h2>Latest Movies News</h2>
+        </div>
         <div class="row">
-            <div class="col s12 black white-text"></div>news</div>
-                <div class="row news-section1">
-                    <div><a class="news1"><img class="col s12 m4 l2 first-news-img"></a></div>
-                    <div><a class="news1"><h5 class="col s12 m4 l10 first-news-article"></h5></a></div>
-                    <div><a class="news1"><h6 class="col s12 m4 l10 first-news-description"></h6></a></div>
+            <div class="col s12 m3 l3">
+                <div class="card news">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator first-news-img">
+                    </div>
+                    <div class="card-content activator">
+                        <i class="material-icons right activator">more_vert</i>
+                        <span class="card-title activator grey-text text-darken-4 first-news-article"></span>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                        <a class="news1 black-text"><h5 class="first-news-description"></h5></a>
+                        <p><a class="news1">Read Article</a></p>
+                    </div>
                 </div>
-                <div class="row">
-                    <div><a class="news2"><img class="col s12 m4 l2 second-news-img"></a></div>
-                    <div><a class="news2"><h5 class="col s12 m4 l10 second-news-article article-title"></h5></a></div>
-                    <div><a class="news2"><h6 class="col s12 m4 l10 second-news-description"></h6></a></div>
+            </div>
+            <div class="col s12 m3 l3">
+                <div class="card news">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator second-news-img">
+                    </div>
+                    <div class="card-content activator">
+                        <i class="material-icons right activator">more_vert</i>
+                        <span class="card-title activator grey-text text-darken-4 second-news-article"></span>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                        <a class="news2 black-text"><h5 class="second-news-description"></h5></a>
+                        <p><a class="news2">Read Article</a></p>
+                    </div>
                 </div>
-                <div class="row">
-                    <div><a class="news3"><img class="col s12 m4 l2 third-news-img"></a></div>
-                    <div><a class="news3"><h5 class="col s12 m4 l10 third-news-article article-title"></h5></a></div>
-                    <div><a class="news3"><h6 class="col s12 m4 l10 third-news-description"></h6></a></div>
+            </div>
+            <div class="col s12 m3 l3">
+                <div class="card news">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator third-news-img">
+                    </div>
+                    <div class="card-content activator">
+                        <i class="material-icons right activator">more_vert</i>
+                        <span class="card-title activator grey-text text-darken-4 third-news-article"></span>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                        <a class="news3 black-text"><h5 class="third-news-description"></h5></a>
+                        <p><a class="news3">Read Article</a></p>
+                    </div>
                 </div>
-                <div class="row">
-                    <div><a class="news4"><img class="col s12 m4 l2 fourth-news-img"></a></div>
-                    <div><a class="news2"><h5 class="col s12 m4 l10 fourth-news-article article-title"></h5></a></div>
-                    <div><a class="news2"><h6 class="col s12 m4 l10 fourth-news-description"></h6></a></div>
-                </div>
-                <div class="row">
-                    <div><img class="col s12 m4 l2 fifth-news-img"></div>
-                    <div><h5 class="col s12 m4 l10 fifth-news-article article-title"></h5></div>
-                    <div class="col s12 m4 l10 fifth-news-description"></div>
+            </div>
+            <div class="col s12 m3 l3">
+                <div class="card news">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator fourth-news-img">
+                    </div>
+                    <div class="card-content activator">
+                        <i class="material-icons right activator">more_vert</i>
+                        <span class="card-title activator grey-text text-darken-4 fourth-news-article"></span>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                        <a class="news4 black-text"><h5 class="fourth-news-description"></h5></a>
+                        <p><a class="news4">Read Article</a></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-      
-    <!-- Materialize FIXED ACTION BUTTON -->
-    <div class="fixed-action-btn">
-        <a href="#" class="btn-floating red btn-large"><i class="large material-icons">mode_edit</i></a>
-            <ul>
-                <li><a href="#" class="btn-floating yellow btn-large"><i class="large material-icons">insert_chart</i></a></li>
-                <li><a href="#" class="btn-floating blue btn-large"><i class="large material-icons">format_quote</i></a></li>
-                <li><a href="#" class="btn-floating green btn-large"><i class="large material-icons">publish</i></a></li>
-                <li><a href="#" class="btn-floating orange btn-large"><i class="large material-icons">attach_file</i></a></li>
-            </ul>
+    </div>        
+</div>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row"><h5 class="white-text col l12">iHeartMovie</h5>
         </div>
+        <div class="row">
+            <div class="col l6 s12">
+                <p class="grey-text text-lighten-4">This project is developed within the UCLA Bootcamp program in 2 weeks.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <ul>
+                    <li class="grey-text text-lighten-3"> <b>Developers Links</b></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/imanmahjoubi" target="_blank">Imen Mahjoubi</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/imalam64" target="_blank">Iqbal Malam</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/BenLeon3" target="_blank">Ben Leon</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/knazim667" target="_blank">Muhamed Nazam</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2018 UCLA Bootcamp Project1
+        </div>
+    </div>
+</footer>
 
 
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        
+<script>
+    $(document).ready(function(){
+
+        $("#search-button").on("click", function(){
+            var movie_name = $("#movie-name").val().trim();
+            window.open('movie-details.html?name='+movie_name);
+            console.log("index.html = ", movie_name);
+
+        })
+
+
+    })
+
+</script>
 <!-- Materialize -->
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
@@ -114,8 +326,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 <script type="text/javascript" src="javascript/slick.js"></script>
 <script type="text/javascript" src="javascript/app.js"></script>
-<script type="text/javascript"></script>
+
+
 <script type="text/javascript" src="javascript/genre.js"></script>
+      
 
 </body>
 </html>

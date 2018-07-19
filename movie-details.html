@@ -3,7 +3,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -13,59 +18,193 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </head>
 <body>
-<nav style="background-color: black">
-    <div class="nav-wrapper">
-        <a href="index.html" class="brand-logo">IheartMovie</a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="index.html"><i class="material-icons">Home</i></a></li>
-            <li>   <input id="search" type="search" placeholder="Search" required>
-            </li>
-            <li> <button class="btn black" ><i class="fa fa-search"></i></button>
-            </li>
-        </ul>
+
+<div id="fb-root"></div>
+
+<!-- Materialize Nav Bar -->
+<nav>
+    <div class="nav-wrapper black">
+        <a href="#" class="brand-logo"><img src="images/iheartmovie.png"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html">home</a></li>
+            <li><input type="text" placeholder="search" id="movie-name" style="color: white"></li>
+            <li><i class="fa fa-search" id="search-button"></i></li>        </ul>
+
     </div>
 </nav>
 
-<div class="container">
-    <h4>All reviews</h4>
-    <ul class="collection">
-    <!-- Movie reviews-->
-    </ul>
-    <h4>Enter your review</h4>
-    <div class="card horizontal" >
-        <div class="card-image">
-            <img src="images/user.png" id="user">
-        </div>
-        <div class="card-stacked">
-            <div class="card-content row">
-                <div class="input-field col s4">
-                    <input placeholder="UserName" max="10" id="user_name" type="text" class="validate">
-                </div>
-                <div class="input-field col s3">
-                    <select id="rate">
-                        <option value=""  selected>Rate</option>
-                        <option value="1">*</option>
-                        <option value="2">**</option>
-                        <option value="3">***</option>
-                        <option value="4">****</option>
-                        <option value="5">*****</option>
-                    </select>
-                </div>
+<!-- Movie info details-->
 
-                <div class=" input-field col s12">
-                    <textarea id="review" placeholder="Review" class="materialize-textarea"></textarea>
-                </div>
+<div class="container movie_details">
+    <div class="row">
+        <div class="col s6 ">
+            <div class="movie-slider" id="movie-wrapper">
+                <div><a href="" class="slick-image-one"><img class="first-carousel-image" alt="slider image" id="poster"></a></div>
             </div>
-            <div class="card-action">
-                <a class="btn-floating btn-large waves-effect waves-light red" id="add"><i class="material-icons">add</i></a>
+        </div>
+        <div class="col s6 details">
+            <h3 style="margin-top: -10%" class="red"></h3>
+            <div>
+
+            </div>
+            <div class="infos">
+                <p id="releaseDate"> <b>Release Date:</b> </p>
+                <p id="director"> <b>Director:</b> </p>
+                <p id="actors"> <b>Actors/Actresses:</b> </p>
+                <p id="writers"> <b>Writers:</b> </p>
+                <p id="genre"> <b>Genre:</b> </p>
+                <p id="plot"> <b>Plot Overview:</b> </p>
+                <p id="otherMovies"> <b>Similarly Titled Movies:</b> </p>
+
+            </div>
+
+
+            <h4 class="infos">All reviews</h4>
+            <div class="empty" style="visibility: hidden"><h6>Currently No reviews for this movie</h6></div>
+            <ul class="collection">
+                <!-- Movie reviews-->
+            </ul>
+
+            </div>
+
+        </div>
+    <div class="row" style="margin-left: 11px; margin-right: 11px">
+        <h4 class="infos">Enter your review</h4>
+        <div class="card horizontal col s12"  >
+            <div class="card-image">
+                <img src="images/user.png" id="user">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content row">
+                    <div class="input-field col s4">
+                        <input placeholder="UserName" max="10" id="user_name" type="text" class="validate">
+                    </div>
+                    <div class="input-field col s3">
+                        <select id="rate">
+                            <option value=""  selected>Rate</option>
+                            <option value="1">*</option>
+                            <option value="2">**</option>
+                            <option value="3">***</option>
+                            <option value="4">****</option>
+                            <option value="5">*****</option>
+                        </select>
+                    </div>
+
+                    <div class=" input-field col s12">
+                        <textarea id="review" placeholder="Review" class="materialize-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="add"><i class="material-icons">add</i></a>
+                </div>
             </div>
         </div>
     </div>
 
+</div>
+</div>
+
+<!--News Section -->
+
+<div class="container movie_details">
+    <div class="row">
+        <div class="col s12 ">
+            <div class="card horizontal">
+                <div class="card-image" >
+                    <img class=" first-news-img" height="135%">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <a  target="_blank" class="first-news-description news1"></a>
+                    </div>
+                    <div class="card-action">
+                        <p class="first-news-article"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 ">
+            <div class="card horizontal ">
+                <div class="card-image" >
+                    <img class=" second-news-img" height="135%">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <a  target="_blank" class="second-news-description news2"></a>
+                    </div>
+                    <div class="card-action">
+                        <p class="second-news-article"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 ">
+            <div class="card horizontal ">
+                <div class="card-image" >
+                    <img class=" third-news-img" height="135%">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <a  target="_blank" class="third-news-description news3"></a>
+                    </div>
+                    <div class="card-action">
+                        <p class="third-news-article"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 ">
+            <div class="card horizontal ">
+                <div class="card-image" >
+                    <img class=" fourth-news-img" height="135%">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <a  target="_blank" class="fourth-news-description news4"></a>
+                    </div>
+                    <div class="card-action">
+                        <p class="fourth-news-article"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 
 
+<!-- Footer -->
+<footer class="page-footer">
+    <div class="container">
+        <div class="row"><h5 class="white-text col l12">iHeartMovie</h5>
+        </div>
+        <div class="row">
+            <div class="col l6 s12">
+                <p class="grey-text text-lighten-4">This project is developed within the UCLA Bootcamp program in 2 weeks.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <ul>
+                    <li class="grey-text text-lighten-3"> <b>Developers Links</b></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/imanmahjoubi" target="_blank">Imen Mahjoubi</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/imalam64" target="_blank">Iqbal Malam</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/BenLeon3" target="_blank">Ben Leon</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/knazim667" target="_blank">Muhamed Nazam</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2018 UCLA Bootcamp Project1
+        </div>
+    </div>
+</footer>
 
 <!--<script type="text/javascript" src="javascript/app.js"></script>-->
 <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
@@ -80,36 +219,60 @@
         storageBucket: "iheartmovie-e6ca6.appspot.com",
         messagingSenderId: "847005601179"
     };
-    var movie_name = 'the revenant'
+
+
     $(document).ready(function(){
+        $.urlParam = function(name){
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            if (results==null){
+                return null;
+            }
+            else{
+                return decodeURI(results[1]) || 0;
+            }
+        };
+       // var name = window.location.query;
+        console.log("movie-details = ",$.urlParam('name'));
+        var movie_name = $.urlParam('name');
+
+
         $('select').formSelect();
+
 
         firebase.initializeApp(config);
         var database = firebase.database();
 
         $("#add").on("click", function() {
-            if($('#user_name').val().trim() === '') {
-              alert('please enter a user name');
-            }
-            else if($('#rate').val().trim() === ''){
-                alert('please select your rate');
-            }
-            else if($('#review').val().trim() === ''){
-                alert('please select your review');
-            }
-            else{
-                database.ref().push({
-                    name: $('#user_name').val().trim(),
-                    rate: $('#rate').val().trim() ,
-                    review: $('#review').val().trim(),
-                    movie_name : 'mission impossible'
-                });
-            }
+
+                if($('#user_name').val().trim() === ''){
+                    instance.open();
+                }
+                else if($('#rate').val().trim() === ''){
+                    alert('please select your rate');
+
+                }
+                else if($('#review').val().trim() === ''){
+                    alert('please select your review');
+                }
+                else  {
+                    database.ref().push({
+                        name: $('#user_name').val().trim(),
+                        rate: $('#rate').val().trim(),
+                        review: $('#review').val().trim(),
+                        movie_name: movie_name
+                    });
+                    $('#user_name').val('');
+                    $('#rate').val('');
+                    $('#review').val('');
+                }
 
         });
 
-        database.ref().orderByChild('movie_name').equalTo('mission impossible').on("child_added", function(snapshot) {
+        database.ref().orderByChild('movie_name').equalTo(movie_name).on("child_added", function(snapshot) {
             var reviews  = snapshot.val();
+            if (!reviews) {
+                $(".empty").css("visibility",'visible');
+            }
             var ul = $('.collection');
             var li = $('<li>');
             var img = $('<img>');
@@ -141,8 +304,20 @@
             console.log("Errors handled: " + errorObject.code);
         });
 
+        $("#search-button").on("click", function(){
+            var movie_name = $("#movie-name").val().trim();
+            window.open('movie-details.html?name='+movie_name);
+            console.log("index.html = ", movie_name);
+
+        })
+
     });
 </script>
 
+
+
+<!-- Materialize -->
+<script type="text/javascript" src="javascript/slick.js"></script>
+<script type="text/javascript" src="javascript/app2.js"></script>
 </body>
 </html>
