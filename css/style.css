@@ -26,6 +26,9 @@ h5{
     color: white;
     float: left !important;
 }
+h3{
+    color : brown;
+}
 h7{
     color: brown;
 }
@@ -109,6 +112,9 @@ img{
 
 #movieInfo{
     font-size: 22px;
+}
+.card-reveal{
+    color: black !important;
 }
 
 #poster{
