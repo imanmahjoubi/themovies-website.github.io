@@ -4,9 +4,6 @@
     <list default="true" id="961c4f2a-116f-4679-85bd-44ed893eb65b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/movie-details.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -78,8 +75,8 @@
       <file leaf-file-name="app2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/app2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+            <state relative-caret-position="287">
+              <caret line="74" column="60" selection-start-line="74" selection-start-column="60" selection-end-line="74" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -126,8 +123,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+            <state relative-caret-position="15">
+              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -176,6 +173,7 @@
       <find>newindex.html</find>
       <find>card-re</find>
       <find>h5</find>
+      <find>h3</find>
     </findStrings>
     <replaceStrings>
       <replace>movie-details.html</replace>
@@ -188,11 +186,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/javascript/script.js" />
-        <option value="$PROJECT_DIR$/javascript/app2.js" />
         <option value="$PROJECT_DIR$/javascript/genre.js" />
         <option value="$PROJECT_DIR$/javascript/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/movie-details.html" />
+        <option value="$PROJECT_DIR$/javascript/app2.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
@@ -280,12 +278,12 @@
       <workItem from="1531757109217" duration="19050000" />
       <workItem from="1531882880590" duration="275000" />
       <workItem from="1531924603583" duration="3717000" />
-      <workItem from="1531936589064" duration="5720000" />
+      <workItem from="1531936589064" duration="5891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40932000" />
+    <option name="totallyTimeSpent" value="41103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -658,13 +656,6 @@
         <state relative-caret-position="-1269" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/app2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/genre.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
@@ -744,10 +735,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/app2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="74" column="60" selection-start-line="74" selection-start-column="60" selection-end-line="74" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        <state relative-caret-position="15">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
         </state>
       </provider>
     </entry>
